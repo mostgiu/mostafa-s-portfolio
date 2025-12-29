@@ -1,0 +1,76 @@
+#works {
+  margin: 0 auto;
+  min-height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.worksTitle {
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+
+.worksDesc {
+  font-weight: 300;
+  font-size: 1rem;
+  max-width: 45rem;
+  margin-bottom: 30px;
+}
+
+.worksImgs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  max-width: 65rem;
+}
+
+.worksImg {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.project a{
+    cursor: pointer;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  background: hsla(0, 4%, 18%, 0.586);
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.project:hover .layer {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 585px) {
+  .worksImg {
+    height: 48vw;
+  }
+}

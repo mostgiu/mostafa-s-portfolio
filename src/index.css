@@ -1,0 +1,41 @@
+@import "tailwindcss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  background: transparent;
+  font-family: "Poppins", sans-serif;
+}
+html{overflow-x: hidden;}
+body {
+  background: rgb(219, 219, 219);
+  color: black;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+button {
+  cursor: pointer;
+  transition: 0.5s;
+}
+button:hover {
+  background: #0e0e0e;
+  color: #fff;
+}
+
+@layer utilities{
+  @keyframes loading {
+
+    0%{
+      transform:translateX(-100%)
+
+    }
+    100%{
+      transform:translateX(250%)
+    }
+    
+  }
+  .animate-loading-bar{
+    animation:loading 0.8s ease infinite
+  }
+}
