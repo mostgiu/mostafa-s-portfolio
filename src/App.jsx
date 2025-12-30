@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./Components/NavBar/Navbar";
-import Intro from "./Components/Intro/Intro";
+import Intro from "./Components/Intro/intro";
 import Works from "./Components/Works/works";
 import Footer from "./Components/Footer/footer";
 import Contact from "./Components/Contact/contact";
