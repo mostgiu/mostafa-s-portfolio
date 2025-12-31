@@ -48,15 +48,11 @@ const Works = () => {
             </a>
           </div>
         </div>
-        <div data-aos='fade-right'  className="project">
-          <img src={Uni} alt="" className="worksImg" />
-        </div>
-        <div data-aos='fade-left'  className="project">
-          <img src={Uni} alt="" className="worksImg" />
-        </div>
+       
       </div>
     </section>
   );
 };
 
 export default Works;
+
