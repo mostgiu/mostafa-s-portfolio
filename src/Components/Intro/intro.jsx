@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./intro.css";
 import bg from "../../assets/bg.png";
-import { Link } from "react-scroll";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
