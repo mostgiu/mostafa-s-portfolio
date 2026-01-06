@@ -36,7 +36,7 @@ const Skills = () => {
             <span>Java Script</span>
           </div>
         </div>
-        <div className="skillBar hover:-translate-y-6 transition-all">
+        <div className="skillBar hover:-translate-y-6 transition-all  shadow-[0_2px_8px_rgba(59,130,246,0.1)]">
           <i className="fa-brands fa-react text-cyan-500"></i>
           <div className="skillBarText">
             <span>React</span>
