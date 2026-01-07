@@ -12,7 +12,6 @@ body {
   background: rgb(219, 219, 219);
   color: black;
   overflow: hidden;
-  overflow-y: scroll;
 }
 button {
   cursor: pointer;
