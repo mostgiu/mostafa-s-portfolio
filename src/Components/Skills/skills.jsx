@@ -3,6 +3,7 @@ import "./skills.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Tailwind_logo from "../../assets/tailwind.svg";
 
 const Skills = () => {
   useEffect(() => {
@@ -46,6 +47,12 @@ const Skills = () => {
           <i className="fa-brands fa-bootstrap text-violet-500"></i>
           <div className="skillBarText">
             <span>Bootstrap</span>
+          </div>
+        </div>
+          <div className="skillBar hover:-translate-y-6 transition-all shadow-[0_2px_8px_rgba(59,130,246,0.1)]">
+          <img className="w-15" src={Tailwind_logo} alt="" />
+          <div className="skillBarText">
+            <span>Tailwind</span>
           </div>
         </div>
         <div className="skillBar hover:-translate-y-6 transition-all shadow-[0_2px_8px_rgba(59,130,246,0.1)]">

@@ -32,10 +32,11 @@
 .hello {
     font-size: 1.75rem;
     font-weight: 100;
+    color: rgb(88, 87, 87);
 }
 
 .introName {
-    color: rgb(88, 87, 87);
+    
 }
 
 .introPara {

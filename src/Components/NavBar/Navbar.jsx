@@ -55,7 +55,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           to="contact"
           spy={true}
           smooth={true}
-          offset={-50}
+          offset={-80}
           duration={500}
           className="desktopMenuListItem"
         >
