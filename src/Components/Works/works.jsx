@@ -38,7 +38,7 @@ const Works = () => {
                 content, clean UI design, and front-end best practices
                 
               </p>
-              <div className="project-link hover:text-black text-stone-800 border border-black border-3 rounded-2xl flex w-35 h-10 justify-center items-center"> <a href="">
+              <div className="project-link hover:text-black text-stone-800  border-black border-3 rounded-2xl flex w-35 h-10 justify-center items-center"> <a href="">
                   View Project <i className="fa-solid fa-up-right-from-square"></i>
                 </a></div>
              
