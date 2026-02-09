@@ -74,6 +74,7 @@ body.dark bg{
     border: none;
     border-radius: 0.5rem;
     background: rgb(40, 40, 40);
+    resize: none;
 }
 
 .submitBtn {
