@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar from "./Components/NavBar/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 import Intro from "./Components/Intro/intro";
 import Works from "./Components/Works/works";
 import Footer from "./Components/Footer/footer";
@@ -23,6 +23,7 @@ function App() {
 
   return (
     <>
+    <div className="container" >
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Intro />
       <Skills />
@@ -30,6 +31,7 @@ function App() {
       <Contact />
       <Footer />
       <BackToTop />
+      </div>
     </>
   );
 }
