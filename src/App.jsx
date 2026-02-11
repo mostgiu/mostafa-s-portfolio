@@ -38,7 +38,7 @@ function App() {
 
   return (
     <>
-      <div className="container">
+      <div className="container mx-auto px-4">
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Routes>
           <Route path="/" element={<HomePage />} />
