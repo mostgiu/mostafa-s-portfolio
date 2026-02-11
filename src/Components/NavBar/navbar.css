@@ -23,31 +23,107 @@ body.dark .navbar {
   background-color: #1e1e1e;
 }
 
-/* Dark mode button */
-.darkModeBtn i {
-  font-size: 18px;
-  transition: transform 0.3s ease;
+/* Dark mode switch */
+.darkModeSwitch {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  border: none;
+  background: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
 }
 
-.darkModeBtn:hover i {
-  transform: rotate(20deg);
+.switch-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: #d1d5db;
+  transition: background 0.2s ease;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+.switch-thumb {
+  position: absolute;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.switch-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #ffffff;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  pointer-events: none;
+}
+
+.switch-sun {
+  left: 8px;
+}
+
+.switch-moon {
+  right: 8px;
+}
+
+.darkModeSwitch.is-on .switch-sun {
+  opacity: 0.25;
+}
+
+.darkModeSwitch.is-on .switch-moon {
+  opacity: 0.9;
+  color: #f8fafc;
+}
+
+.darkModeSwitch.is-on .switch-track {
+  background: #3b82f6;
+}
+
+.darkModeSwitch.is-on .switch-thumb {
+  transform: translateX(24px);
+}
+
+.darkModeSwitch:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 4px;
 }
 
 
 .logo {
   object-fit: cover;
-  height: 3rem;
-  width: 4rem;
+  height: 4rem;
+  width: 5.5rem;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
 }
 
 .desktopMenuListItem {
   margin: 1rem;
   cursor: pointer;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s ease;
 }
 
 .desktopMenuListItem:hover {
-  padding-bottom: 0.5rem;
-  border-bottom: 3px solid rgb(111, 111, 111);
+  border-bottom: 3px solid #3b82f6;
+}
+
+.desktopMenuListItem.active {
+  border-bottom: 3px solid #3b82f6;
 }
 
 .desktopMenuBtn {
@@ -60,11 +136,6 @@ body.dark .navbar {
   padding: 0 1rem;
   border-radius: 2rem;
   padding: 20px 25px;
-}
-
-.active {
-  padding-bottom: 0.5rem;
-  border-bottom: 3px solid rgb(111, 111, 111);
 }
 
 .mobMenu {
@@ -90,6 +161,11 @@ body.dark .navbar {
   padding: 0.5rem 3rem;
   margin: 0.25rem;
   background: rgb(30, 30, 30);
+}
+
+.listItem.active {
+  background: rgb(50, 50, 50);
+  border-left: 3px solid #3b82f6;
 }
 
 @media screen and (max-width: 720px) {

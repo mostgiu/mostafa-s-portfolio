@@ -8,6 +8,8 @@
     justify-content: center;
     text-align: center;
     margin: 0 auto;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
 }
 
 .skillTitle {
@@ -35,8 +37,13 @@
     align-items: center;
 }
 .skillBar i {
-    font-size: 60px;
+    font-size: 44px;
     margin-bottom: 5px;
+}
+
+.skillBar img {
+    width: 44px;
+    height: 44px;
 }
 
 .skillBar {
@@ -71,5 +78,14 @@
         height: 2.25rem;
         width: 2.25rem;
     }
- 
+    .skillBars {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .skillBars {
+        max-width: 95%;
+        gap: 1rem;
+    }
 }

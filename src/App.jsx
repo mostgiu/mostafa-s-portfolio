@@ -9,9 +9,11 @@ import { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import BackToTop from "./Components/BackToTop/BackToTop";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     Aos.init();
@@ -21,16 +23,32 @@ function App() {
     document.body.classList.toggle("dark", darkMode);
   }, [darkMode]);
 
-  return (
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  const HomePage = () => (
     <>
-    <div className="container" >
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Intro />
       <Skills />
       <Works />
       <Contact />
-      <Footer />
-      <BackToTop />
+    </>
+  );
+
+  return (
+    <>
+      <div className="container">
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<Skills />} />
+          <Route path="/portfolio" element={<Works />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<HomePage />} />
+        </Routes>
+        <Footer />
+        <BackToTop />
       </div>
     </>
   );

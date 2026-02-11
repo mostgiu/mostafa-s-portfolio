@@ -18,8 +18,8 @@ button {
   transition: 0.5s;
 }
 button:hover {
-  background: #0e0e0e;
-  color: #fff;
+  background: #cdcbcb;
+  
 }
 
 @layer utilities{
