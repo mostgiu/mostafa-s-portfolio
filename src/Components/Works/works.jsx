@@ -22,7 +22,7 @@ const Works = () => {
         {/* Project Card 1 - Personal Portfolio SPA */}
         
 
-        {/* Project Card 2 - E-Commerce SPA */}
+        {/* Project Card 2 - Bazarlo */}
         <div
           data-aos="fade-left"
           className="project bg-gray-100 block max-w-xs shadow-md p-3"
@@ -32,7 +32,7 @@ const Works = () => {
             <div className="dark-layer"></div>
             <div className="visit-btn">
               <a
-                href="https://mostgiu.github.io/E-commerce/"
+                href="https://e-commerce-g3u8-kxw3wunr9-mostafas-projects-e0563a56.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -42,7 +42,7 @@ const Works = () => {
           </div>
           <div className="card-title text-start">
             <div className="card-header flex gap-2 items-center mb-3">
-              <h2 className="font-bold text-2xl">E Commerce SPA</h2>
+              <h2 className="font-bold text-2xl">Bazarlo</h2>
             </div>
             <div className="card-desc">
               <p className="text-gray-700 text-sm mb-4 leading-relaxed">
@@ -78,7 +78,7 @@ const Works = () => {
                   GitHub
                 </a>
                 <a
-                  href="https://mostgiu.github.io/E-commerce/"
+                  href="https://e-commerce-g3u8-kxw3wunr9-mostafas-projects-e0563a56.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link visit-link"

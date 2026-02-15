@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
+import Navbar from "./Components/Navbar/Navbar.jsx";
 import Intro from "./Components/Intro/intro";
 import Works from "./Components/Works/works";
 import Footer from "./Components/Footer/footer";
@@ -38,7 +38,7 @@ function App() {
 
   return (
     <>
-      <div className="container mx-auto px-4">
+      <div className="mx-auto px-4">
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Routes>
           <Route path="/" element={<HomePage />} />
