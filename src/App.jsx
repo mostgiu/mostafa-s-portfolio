@@ -14,6 +14,14 @@ import { Route, Routes, useLocation } from "react-router-dom";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const location = useLocation();
+  const homePage = (
+    <>
+      <Intro />
+      <Skills />
+      <Works />
+      <Contact />
+    </>
+  );
 
   useEffect(() => {
     Aos.init();
@@ -27,25 +35,16 @@ function App() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  const HomePage = () => (
-    <>
-      <Intro />
-      <Skills />
-      <Works />
-      <Contact />
-    </>
-  );
-
   return (
     <>
       <div className="mx-auto px-4">
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={homePage} />
           <Route path="/about" element={<Skills />} />
           <Route path="/portfolio" element={<Works />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<HomePage />} />
+          <Route path="*" element={homePage} />
         </Routes>
         <Footer />
         <BackToTop />

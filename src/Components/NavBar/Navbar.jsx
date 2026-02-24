@@ -10,6 +10,15 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [activeSection, setActiveSection] = useState("intro");
   const location = useLocation();
+  const routeToSection = {
+    "/about": "skills",
+    "/portfolio": "works",
+    "/contact": "contactPage",
+  };
+  const currentActiveSection =
+    location.pathname === "/"
+      ? activeSection
+      : routeToSection[location.pathname] || "intro";
   
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -25,13 +34,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
   useEffect(() => {
     if (location.pathname !== "/") {
-      // When not on homepage, set active based on route
-      const routeToSection = {
-        "/about": "skills",
-        "/portfolio": "works",
-        "/contact": "contactPage",
-      };
-      setActiveSection(routeToSection[location.pathname] || "intro");
       return;
     }
 
@@ -43,7 +45,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         .filter(Boolean);
 
       if (sections.length === 0) {
-        console.log("No sections found");
         return;
       }
 
@@ -58,7 +59,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         }
       }
 
-      console.log("Active section:", currentId, "Scroll:", scrollPos);
       setActiveSection(currentId);
     };
 
@@ -86,12 +86,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   }, [location.pathname]);
 
   const desktopLinkClass = (sectionId) => ({ isActive }) => {
-    const active = location.pathname === "/" ? activeSection === sectionId : isActive;
+    const active = location.pathname === "/" ? currentActiveSection === sectionId : isActive;
     return `desktopMenuListItem${active ? " active" : ""}`;
   };
 
   const mobileLinkClass = (sectionId) => ({ isActive }) => {
-    const active = location.pathname === "/" ? activeSection === sectionId : isActive;
+    const active = location.pathname === "/" ? currentActiveSection === sectionId : isActive;
     return `listItem${active ? " active" : ""}`;
   };
 
