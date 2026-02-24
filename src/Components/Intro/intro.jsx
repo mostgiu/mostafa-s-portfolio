@@ -25,7 +25,7 @@ const Intro = () => {
           <br />
           my skills, projects, and experience with a smooth user journey.
         </p>
-        <a href={cvUrl} download="Mostafa_Saleh_Frontend_Resume_Updated.pdf">
+        <a href={cvUrl} download="Mostafa_Saleh_CV.pdf">
           <button className="btn">
             <i className="fa-solid fa-download"></i> <span>Download CV</span>
           </button>
