@@ -13,7 +13,7 @@ const Intro = () => {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <section className="" id="intro">
+    <section className="" id="intro" style={{ "--intro-bg-image": `url(${bg})` }}>
       <div className="introContent animate__animated animate__bounceInLeft">
         <span className="hello">Hello,</span>
         <span className="introText">
@@ -48,7 +48,13 @@ const Intro = () => {
           </a>
         </div>
       </div>
-      <img data-aos="fade-right" src={ bg} alt="Profile" className="bg rounded-2xl animate__animated animate__fadeInRight" />
+      <div className="introImageWrap" data-aos="fade-left">
+        <img
+          src={bg}
+          alt="Profile"
+          className="introImage rounded-2xl animate__animated animate__fadeInRight"
+        />
+      </div>
     </section>
   );
 };
