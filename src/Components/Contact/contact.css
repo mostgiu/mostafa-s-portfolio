@@ -54,6 +54,8 @@ body.dark bg{
     padding: 1rem;
     font-size: medium;
     font-weight: 300;
+    letter-spacing: 1.4px;
+    line-height: 1.8;
 }
 
 .contactForm {

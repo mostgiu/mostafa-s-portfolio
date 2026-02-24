@@ -54,7 +54,8 @@
 .introPara {
     font-size: medium;
     font-weight: 300;
-    letter-spacing: 1px;
+    letter-spacing: 1.8px;
+    line-height: 1.7;
 }
 
 .btn {

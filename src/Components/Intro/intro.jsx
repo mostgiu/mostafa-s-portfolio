@@ -21,9 +21,9 @@ const Intro = () => {
           Front End Developer
         </span>
         <p className="introPara">
-          Front end developer crafting a single-page portfolio that highlights
+          Front-end developer focused on building modern, responsive web
           <br />
-          my skills, projects, and experience with a smooth user journey.
+          experiences with clean UI, solid performance, and accessible UX.
         </p>
         <a href={cvUrl} download="Mostafa_Saleh_CV.pdf">
           <button className="btn">

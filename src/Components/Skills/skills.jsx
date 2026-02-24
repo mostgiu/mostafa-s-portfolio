@@ -13,9 +13,9 @@ const Skills = () => {
     <section data-aos="zoom-in-down" id="skills">
       <span className="skillTitle">What I do</span>
       <span className="skillDesc">
-        This personal portfolio SPA showcases my core strengths in modern front
-        end development, from UI design to component-driven interfaces. I build
-        responsive, accessible experiences using HTML, CSS, JavaScript, and React.
+        I create user-focused front-end solutions using modern web technologies,
+        from reusable UI components to responsive layouts and accessible
+        interactions with HTML, CSS, JavaScript, and React.
       </span>
       <div className="skillBars grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
         <div className="skillBar hover:-translate-y-6 transition-all shadow-[0_2px_8px_rgba(59,130,246,0.1)]" data-aos="fade-up" data-aos-delay="0">

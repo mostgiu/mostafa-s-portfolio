@@ -15,8 +15,9 @@ const Works = () => {
     <section id="works">
       <h2 className="worksTitle">My Portfolio</h2>
       <span className="worksDesc">
-        This single-page portfolio highlights selected projects with a focus on
-        clean interfaces, thoughtful UX, and reliable front end engineering.
+        A selection of projects that demonstrates my approach to building
+        scalable front-end applications with clean design, practical UX, and
+        maintainable code.
       </span>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Project Card 1 - Personal Portfolio SPA */}

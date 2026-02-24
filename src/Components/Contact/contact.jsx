@@ -40,8 +40,8 @@ const Contact = () => {
       <div id="contact">
         <h1 className="contactPageTitle">Contact Me</h1>
         <span className="contactDesc">
-          Reach out through the form below to discuss freelance work, full-time
-          roles, or collaborations.
+          Let’s connect to discuss freelance projects, full-time opportunities,
+          or potential collaborations.
         </span>
         <form className="contactForm" onSubmit={onSubmit}>
           <input
