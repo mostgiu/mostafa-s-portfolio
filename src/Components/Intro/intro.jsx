@@ -7,6 +7,8 @@ import "animate.css";
 
 
 const Intro = () => {
+  const cvUrl = `${import.meta.env.BASE_URL}Mostafa_Saleh_Frontend_Resume_Updated.pdf`;
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -23,13 +25,11 @@ const Intro = () => {
           <br />
           my skills, projects, and experience with a smooth user journey.
         </p>
-        <a href="/CCR.pdf" download>
+        <a href={cvUrl} download="Mostafa_Saleh_Frontend_Resume_Updated.pdf">
           <button className="btn">
-           
             <i className="fa-solid fa-download"></i> <span>Download CV</span>
           </button>
         </a>
-
         <div className="links  flex justify-start">
           <a
             href="https://www.linkedin.com/in/mostafa-saleh-15970a1a6"
