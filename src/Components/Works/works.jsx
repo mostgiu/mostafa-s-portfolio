@@ -33,7 +33,7 @@ const Works = () => {
             <div className="dark-layer"></div>
             <div className="visit-btn">
               <a
-                href="https://bazarlo.vercel.app/#/"
+                href="https://mostgiu.github.io/mostafa-s-portfolio/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -79,7 +79,7 @@ const Works = () => {
                   GitHub
                 </a>
                 <a
-                  href="https://e-commerce-g3u8-kxw3wunr9-mostafas-projects-e0563a56.vercel.app/"
+                  href="https://mostgiu.github.io/mostafa-s-portfolio/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link visit-link"
