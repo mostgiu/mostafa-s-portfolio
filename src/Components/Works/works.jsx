@@ -33,7 +33,7 @@ const Works = () => {
             <div className="dark-layer"></div>
             <div className="visit-btn">
               <a
-                href="https://e-commerce-g3u8-kxw3wunr9-mostafas-projects-e0563a56.vercel.app/"
+                href="https://bazarlo.vercel.app/#/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
