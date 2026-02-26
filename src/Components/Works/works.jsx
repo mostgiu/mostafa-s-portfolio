@@ -2,7 +2,6 @@ import React from "react";
 import "./works.css";
 import Uni from "../../assets/uni.jpg";
 import eCommerce from "../../assets/ecommerce-1.jpg";
-import To_do from "../../assets/to-do.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -21,7 +20,58 @@ const Works = () => {
       </span>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Project Card 1 - Personal Portfolio SPA */}
-        
+        <div
+          data-aos="fade-right"
+          className="project bg-gray-100 block max-w-xs shadow-md p-3"
+        >
+          <div className="img-container">
+            <img src={Uni} alt="Educity" className="worksImg" />
+            <div className="dark-layer"></div>
+            <div className="visit-btn">
+              <a
+                href="https://mostgiu.github.io/Educity/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <div className="card-title text-start">
+            <div className="card-header flex gap-2 items-center mb-3">
+              <h2 className="font-bold text-2xl">Educity</h2>
+            </div>
+            <div className="card-desc">
+              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                A modern educational website with a clean interface, responsive
+                layout, and smooth user experience focused on showcasing courses
+                and campus information.
+              </p>
+              <div className="features-icons flex gap-3 mb-4 flex-wrap">
+                <div className="feature-icon" title="Responsive">
+                  <i className="fa-solid fa-mobile"></i>
+                </div>
+                <div className="feature-icon" title="UI Design">
+                  <i className="fa-solid fa-palette"></i>
+                </div>
+                <div className="feature-icon" title="Performance">
+                  <i className="fa-solid fa-gauge"></i>
+                </div>
+              </div>
+              <div className="project-links flex gap-2 mb-2">
+                <a
+                  href="https://mostgiu.github.io/Educity/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link visit-link"
+                >
+                  View Project{" "}
+                  <i className="fa-solid fa-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Project Card 2 - Bazarlo */}
         <div
