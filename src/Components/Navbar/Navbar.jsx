@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [activeSection, setActiveSection] = useState("intro");
+  const baseUrl = import.meta.env.BASE_URL;
   const location = useLocation();
   const routeToSection = {
     "/about": "skills",
@@ -28,9 +29,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     // Update favicon based on dark mode
     const favicon = document.querySelector("link[rel='icon']");
     if (favicon) {
-      favicon.href = darkMode ? "/logoDark.png" : "/logo.png";
+      favicon.href = darkMode ? `${baseUrl}logoDark.png` : `${baseUrl}logo.png`;
     }
-  }, [darkMode]);
+  }, [darkMode, baseUrl]);
 
   useEffect(() => {
     if (location.pathname !== "/") {
