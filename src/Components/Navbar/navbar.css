@@ -114,6 +114,9 @@ body.dark .navbar {
   margin: 1rem;
   cursor: pointer;
   padding-bottom: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
   border-bottom: 3px solid transparent;
   transition: border-bottom 0.3s ease;
 }
@@ -160,6 +163,8 @@ body.dark .navbar {
   color: white;
   padding: 0.5rem 3rem;
   margin: 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   background: rgb(30, 30, 30);
 }
 
