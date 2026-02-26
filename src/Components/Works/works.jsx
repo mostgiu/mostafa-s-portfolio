@@ -2,6 +2,7 @@ import React from "react";
 import "./works.css";
 import Uni from "../../assets/uni.jpg";
 import eCommerce from "../../assets/ecommerce-1.jpg";
+import To_do from "../../assets/to-do.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -130,6 +131,59 @@ const Works = () => {
                 </a>
                 <a
                   href="https://mostgiu.github.io/E-commerce/#/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link visit-link"
+                >
+                  View Project{" "}
+                  <i className="fa-solid fa-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Project Card 3 - TODO APP */}
+        <div
+          data-aos="fade-up"
+          className="project bg-gray-100 block max-w-xs shadow-md p-3"
+        >
+          <div className="img-container">
+            <img src={To_do} alt="Todo App" className="worksImg" />
+            <div className="dark-layer"></div>
+            <div className="visit-btn">
+              <a
+                href="https://mostgiu.github.io/TODO-APP/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <div className="card-title text-start">
+            <div className="card-header flex gap-2 items-center mb-3">
+              <h2 className="font-bold text-2xl">Todo App</h2>
+            </div>
+            <div className="card-desc">
+              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                A clean task management app for creating, tracking, and
+                organizing daily todos with a simple, user-friendly interface.
+              </p>
+              <div className="features-icons flex gap-3 mb-4 flex-wrap">
+                <div className="feature-icon" title="Task Management">
+                  <i className="fa-solid fa-list-check"></i>
+                </div>
+                <div className="feature-icon" title="Responsive">
+                  <i className="fa-solid fa-mobile"></i>
+                </div>
+                <div className="feature-icon" title="Clean UI">
+                  <i className="fa-solid fa-layer-group"></i>
+                </div>
+              </div>
+              <div className="project-links flex gap-2 mb-2">
+                <a
+                  href="https://mostgiu.github.io/TODO-APP/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link visit-link"
