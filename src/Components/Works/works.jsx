@@ -61,6 +61,15 @@ const Works = () => {
               </div>
               <div className="project-links flex gap-2 mb-2">
                 <a
+                  href="https://github.com/mostgiu/Educity"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link github-link"
+                >
+                  <i className="fa-brands fa-github"></i>
+                  GitHub
+                </a>
+                <a
                   href="https://mostgiu.github.io/Educity/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -182,6 +191,15 @@ const Works = () => {
                 </div>
               </div>
               <div className="project-links flex gap-2 mb-2">
+                <a
+                  href="https://github.com/mostgiu/TODO-APP"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link github-link"
+                >
+                  <i className="fa-brands fa-github"></i>
+                  GitHub
+                </a>
                 <a
                   href="https://mostgiu.github.io/TODO-APP/"
                   target="_blank"
