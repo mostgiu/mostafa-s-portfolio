@@ -26,12 +26,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   }, []);
 
   useEffect(() => {
-    // Update favicon based on dark mode
+    // Keep a high-contrast favicon for better visibility in browser tabs
     const favicon = document.querySelector("link[rel='icon']");
     if (favicon) {
-      favicon.href = darkMode ? `${baseUrl}logoDark.png` : `${baseUrl}logo.png`;
+      favicon.href = `${baseUrl}favicon.svg`;
     }
-  }, [darkMode, baseUrl]);
+  }, [baseUrl]);
 
   useEffect(() => {
     if (location.pathname !== "/") {
