@@ -23,7 +23,7 @@ const Works = () => {
         {/* Project Card 1 - Personal Portfolio SPA */}
         <div
           data-aos="fade-right"
-          className="project bg-gray-100 block max-w-xs shadow-md p-3"
+          className="project bg-gray-100 max-w-xs shadow-md p-3 h-full flex flex-col"
         >
           <div className="img-container">
             <img src={Uni} alt="Educity" className="worksImg" />
@@ -38,11 +38,11 @@ const Works = () => {
               </a>
             </div>
           </div>
-          <div className="card-title text-start">
+          <div className="card-title text-start flex flex-col flex-1">
             <div className="card-header flex gap-2 items-center mb-3">
               <h2 className="font-bold text-2xl">Educity</h2>
             </div>
-            <div className="card-desc">
+            <div className="card-desc flex flex-col flex-1">
               <p className="text-gray-700 text-sm mb-4 leading-relaxed">
                 A modern educational website with a clean interface, responsive
                 layout, and smooth user experience focused on showcasing courses
@@ -59,7 +59,7 @@ const Works = () => {
                   <i className="fa-solid fa-gauge"></i>
                 </div>
               </div>
-              <div className="project-links flex gap-2 mb-2">
+              <div className="project-links flex gap-2 mb-2 mt-auto">
                 <a
                   href="https://github.com/mostgiu/Educity"
                   target="_blank"
@@ -86,7 +86,7 @@ const Works = () => {
         {/* Project Card 2 - Bazarlo */}
         <div
           data-aos="fade-left"
-          className="project bg-gray-100 block max-w-xs shadow-md p-3"
+          className="project bg-gray-100 max-w-xs shadow-md p-3 h-full flex flex-col"
         >
           <div className="img-container">
             <img src={eCommerce} alt="" className="worksImg" />
@@ -101,11 +101,11 @@ const Works = () => {
               </a>
             </div>
           </div>
-          <div className="card-title text-start">
+          <div className="card-title text-start flex flex-col flex-1">
             <div className="card-header flex gap-2 items-center mb-3">
               <h2 className="font-bold text-2xl">Bazarlo</h2>
             </div>
-            <div className="card-desc">
+            <div className="card-desc flex flex-col flex-1">
               <p className="text-gray-700 text-sm mb-4 leading-relaxed">
                 A fully functional e-commerce platform built with React.
                 Features product browsing, shopping cart management, checkout
@@ -128,7 +128,7 @@ const Works = () => {
                   <i className="fa-solid fa-credit-card"></i>
                 </div>
               </div>
-              <div className="project-links flex gap-2 mb-2">
+              <div className="project-links flex gap-2 mb-2 mt-auto">
                 <a
                   href="https://github.com/mostgiu/E-commerce"
                   target="_blank"
@@ -155,7 +155,7 @@ const Works = () => {
         {/* Project Card 3 - TODO APP */}
         <div
           data-aos="fade-up"
-          className="project bg-gray-100 block max-w-xs shadow-md p-3"
+          className="project bg-gray-100 max-w-xs shadow-md p-3 h-full flex flex-col"
         >
           <div className="img-container">
             <img src={To_do} alt="Todo App" className="worksImg" />
@@ -170,11 +170,11 @@ const Works = () => {
               </a>
             </div>
           </div>
-          <div className="card-title text-start">
+          <div className="card-title text-start flex flex-col flex-1">
             <div className="card-header flex gap-2 items-center mb-3">
               <h2 className="font-bold text-2xl">Todo App</h2>
             </div>
-            <div className="card-desc">
+            <div className="card-desc flex flex-col flex-1">
               <p className="text-gray-700 text-sm mb-4 leading-relaxed">
                 A clean task management app for creating, tracking, and
                 organizing daily todos with a simple, user-friendly interface.
@@ -190,7 +190,7 @@ const Works = () => {
                   <i className="fa-solid fa-layer-group"></i>
                 </div>
               </div>
-              <div className="project-links flex gap-2 mb-2">
+              <div className="project-links flex gap-2 mb-2 mt-auto">
                 <a
                   href="https://github.com/mostgiu/TODO-APP"
                   target="_blank"
