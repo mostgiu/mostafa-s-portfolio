@@ -13,7 +13,7 @@ const Intro = () => {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <section className="" id="intro" style={{ "--intro-bg-image": `url(${bg})` }}>
+    <section className="intro" id="intro" style={{ "--intro-bg-image": `url(${bg})` }}>
       <div className="introContent animate__animated animate__bounceInLeft">
         <span className="hello">Hello,</span>
         <span className="introText">
