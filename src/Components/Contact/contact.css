@@ -21,11 +21,9 @@ body.dark .submitBtn:hover{
       background: rgb(226, 225, 225);
 
 }
-body.dark bg{
-
-}
 .contactPageTitle {
     font-size: 3rem;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
@@ -76,15 +74,22 @@ body.dark bg{
     max-width: 40rem;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
-    color: white;
-    border: none;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
     border-radius: 0.5rem;
-    background: rgb(40, 40, 40);
+    background: var(--color-surface);
     resize: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.name:focus, .email:focus, .msg:focus {
+    outline: none;
+    border-color: var(--color-accent);
 }
 
 .submitBtn {
     background: white;
+    color: black;
     border: none;
     border-radius: 0.5rem;
     margin: 2rem;

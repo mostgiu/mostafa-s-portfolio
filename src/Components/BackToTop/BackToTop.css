@@ -6,7 +6,7 @@
   height: 45px;
   border-radius: 50%;
   border: none;
-  background-color: #171717; /* blue */
+  background-color: var(--color-ink-strong);
   color: white;
   font-size: 18px;
   cursor: pointer;
@@ -22,6 +22,6 @@
 }
 
 .backToTop:hover {
-  background-color: #303031;
+  background-color: var(--color-ink-strong-hover);
   transform: translateY(-3px);
 }
