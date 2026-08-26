@@ -40,9 +40,13 @@ body.dark #works .card-desc p {
   color: #e5e7eb;
 }
 
-body.dark #works .project-link {
+body.dark #works .project-link:not(.visit-link) {
   color: #e5e7eb;
-  border-color: #e5e7eb;
+  border-color: #3f3f46;
+}
+
+.projects-grid {
+  width: 100%;
 }
 
 .worksImgs {
@@ -54,33 +58,50 @@ body.dark #works .project-link {
   max-width: 65rem;
 }
 
-.worksImg {
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-  border-radius: 15px;
-}
-
 .img-container {
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 14px;
   display: block;
+  aspect-ratio: 16 / 10;
 }
 
-.project{
+.worksImg {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+}
+
+.project {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
   padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.18), 0 4px 10px -4px rgba(0, 0, 0, 0.08);
+}
+
+body.dark .project {
+  background-color: #1a1a1a;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark .project:hover {
+  box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.5), 0 4px 10px -4px rgba(0, 0, 0, 0.4);
+  border-color: rgba(59, 130, 246, 0.4);
 }
 
 .project:hover .layer {
   opacity: 1;
   visibility: visible;
-}
-
-@media screen and (max-width: 585px) {
-  .worksImg {
-    height: 48vw;
-  }
 }
 
   /* Dark Layer Overlay */
@@ -210,8 +231,8 @@ body.dark #works .project-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 8px 12px;
-    border: 2px solid #000;
+    padding: 8px 14px;
+    border: 2px solid #1f2937;
     border-radius: 20px;
     text-decoration: none;
     color: #1f2937;
@@ -221,16 +242,30 @@ body.dark #works .project-link {
     transition: all 0.2s ease;
   }
 
-  .project-link:hover {
-    background-color: #000;
+  .github-link:hover {
+    background-color: #1f2937;
     color: #fff;
-  }
-
-  .github-link {
-    border-color: #1f2937;
   }
 
   .visit-link {
     flex: 1;
     justify-content: center;
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    color: #fff;
+  }
+
+  .visit-link:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    transform: translateY(-1px);
+  }
+
+  body.dark .project-link.github-link:hover {
+    background-color: #e5e7eb;
+    color: #121212;
+  }
+
+  body.dark .project-link.visit-link {
+    color: #fff;
   }
