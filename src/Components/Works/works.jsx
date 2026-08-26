@@ -19,24 +19,24 @@ const Works = () => {
         scalable front-end applications with clean design, practical UX, and
         maintainable code.
       </span>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="works-grid">
         {/* Project Card 1 - Personal Portfolio SPA */}
         <div
           data-aos="fade-right"
-          className="project bg-gray-100 max-w-xs shadow-md p-3 h-full flex flex-col"
+          className="project"
         >
           <div className="img-container">
             <img src={Uni} alt="Educity" className="worksImg" />
             <div className="dark-layer"></div>
-            <div className="visit-btn">
-              <a
+            <a
+                className="visit-btn"
                 href="https://mostgiu.github.io/Educity/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Open Educity live project"
               >
                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
+            </a>
           </div>
           <div className="card-title text-start flex flex-col flex-1">
             <div className="card-header flex gap-2 items-center mb-3">
@@ -86,20 +86,20 @@ const Works = () => {
         {/* Project Card 2 - Bazarlo */}
         <div
           data-aos="fade-left"
-          className="project bg-gray-100 max-w-xs shadow-md p-3 h-full flex flex-col"
+          className="project"
         >
           <div className="img-container">
             <img src={eCommerce} alt="" className="worksImg" />
             <div className="dark-layer"></div>
-            <div className="visit-btn">
-              <a
+            <a
+                className="visit-btn"
                 href="https://mostgiu.github.io/E-commerce/#/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Open Bazarlo live project"
               >
                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
+            </a>
           </div>
           <div className="card-title text-start flex flex-col flex-1">
             <div className="card-header flex gap-2 items-center mb-3">
@@ -155,20 +155,20 @@ const Works = () => {
         {/* Project Card 3 - TODO APP */}
         <div
           data-aos="fade-up"
-          className="project bg-gray-100 max-w-xs shadow-md p-3 h-full flex flex-col"
+          className="project"
         >
           <div className="img-container">
             <img src={To_do} alt="Todo App" className="worksImg" />
             <div className="dark-layer"></div>
-            <div className="visit-btn">
-              <a
+            <a
+                className="visit-btn"
                 href="https://mostgiu.github.io/TODO-APP/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Open Todo App live project"
               >
                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
+            </a>
           </div>
           <div className="card-title text-start flex flex-col flex-1">
             <div className="card-header flex gap-2 items-center mb-3">
