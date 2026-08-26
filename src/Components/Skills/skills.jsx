@@ -5,6 +5,17 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Tailwind_logo from "../../assets/tailwind.svg";
 
+const skillsList = [
+  { label: "HTML", icon: "fa-brands fa-html5", color: "#e34f26", chip: "#fee2e2", chipDark: "rgba(227,79,38,0.18)" },
+  { label: "CSS", icon: "fa-brands fa-css3-alt", color: "#1572b6", chip: "#dbeafe", chipDark: "rgba(21,114,182,0.18)" },
+  { label: "Java Script", icon: "fa-brands fa-square-js", color: "#d6a800", chip: "#fef9c3", chipDark: "rgba(247,223,30,0.18)" },
+  { label: "React", icon: "fa-brands fa-react", color: "#06b6d4", chip: "#cffafe", chipDark: "rgba(6,182,212,0.18)" },
+  { label: "Bootstrap", icon: "fa-brands fa-bootstrap", color: "#7c3aed", chip: "#ede9fe", chipDark: "rgba(124,58,237,0.18)" },
+  { label: "Tailwind", img: Tailwind_logo, color: "#0d9488", chip: "#ccfbf1", chipDark: "rgba(45,212,191,0.18)" },
+  { label: "NPM", icon: "fa-brands fa-npm", color: "#e0234e", chip: "#ffe4e6", chipDark: "rgba(224,35,78,0.18)" },
+  { label: "GIT", icon: "fa-brands fa-git-alt", color: "#f05033", chip: "#ffedd5", chipDark: "rgba(240,80,51,0.18)" },
+];
+
 const Skills = () => {
   useEffect(() => {
     Aos.init({});
@@ -17,55 +28,33 @@ const Skills = () => {
         from reusable UI components to responsive layouts and accessible
         interactions with HTML, CSS, JavaScript, and React.
       </span>
-      <div className="skillBars grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
-        <div className="skillBar hover:-translate-y-6 transition-all shadow-[0_2px_8px_rgba(59,130,246,0.1)]" data-aos="fade-up" data-aos-delay="0">
-          <i className="fa-brands fa-html5 text-red-500"></i>
-          <div className="skillBarText">
-            <span>HTML</span>
+      <div className="skillBars">
+        {skillsList.map((skill, index) => (
+          <div
+            key={skill.label}
+            className="skillBar"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
+            <div
+              className="skill-chip"
+              style={{
+                "--chip-color": skill.color,
+                "--chip-bg": skill.chip,
+                "--chip-bg-dark": skill.chipDark,
+              }}
+            >
+              {skill.img ? (
+                <img src={skill.img} alt={skill.label} />
+              ) : (
+                <i className={skill.icon}></i>
+              )}
+            </div>
+            <div className="skillBarText">
+              <span>{skill.label}</span>
+            </div>
           </div>
-        </div>
-        <div className="skillBar hover:-translate-y-6 transition-all shadow-[0_2px_8px_rgba(59,130,246,0.1)]" data-aos="fade-up" data-aos-delay="100">
-          <i className="fa-brands fa-css3-alt text-blue-500"></i>
-          <div className="skillBarText">
-            <span>CSS</span>
-          </div>
-        </div>
-        <div className="skillBar hover:-translate-y-6 transition-all shadow-[0_2px_8px_rgba(59,130,246,0.1)]" data-aos="fade-up" data-aos-delay="200">
-          <i className="fa-brands fa-square-js text-yellow-500"></i>
-          <div className="skillBarText">
-            <span>Java Script</span>
-          </div>
-        </div>
-        <div className="skillBar hover:-translate-y-6 transition-all  shadow-[0_2px_8px_rgba(59,130,246,0.1)]" data-aos="fade-up" data-aos-delay="300">
-          <i className="fa-brands fa-react text-cyan-500"></i>
-          <div className="skillBarText">
-            <span>React</span>
-          </div>
-        </div>
-        <div className="skillBar hover:-translate-y-6 transition-all shadow-[0_2px_8px_rgba(59,130,246,0.1)]" data-aos="fade-up" data-aos-delay="400">
-          <i className="fa-brands fa-bootstrap text-violet-500"></i>
-          <div className="skillBarText">
-            <span>Bootstrap</span>
-          </div>
-        </div>
-          <div className="skillBar hover:-translate-y-6 transition-all shadow-[0_2px_8px_rgba(59,130,246,0.1)]" data-aos="fade-up" data-aos-delay="500">
-          <img className="w-15" src={Tailwind_logo} alt="" />
-          <div className="skillBarText">
-            <span>Tailwind</span>
-          </div>
-        </div>
-        <div className="skillBar hover:-translate-y-6 transition-all shadow-[0_2px_8px_rgba(59,130,246,0.1)]" data-aos="fade-up" data-aos-delay="600">
-          <i className="fa-brands fa-npm text-rose-500"></i>
-          <div className="skillBarText">
-            <span>NPM</span>
-          </div>
-        </div>
-        <div className="skillBar hover:-translate-y-6 transition-all shadow-[0_2px_8px_rgba(59,130,246,0.1)]" data-aos="fade-up" data-aos-delay="700">
-          <i className="fa-brands fa-git-alt text-red-800"></i>
-          <div className="skillBarText">
-            <span>GIT</span>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
