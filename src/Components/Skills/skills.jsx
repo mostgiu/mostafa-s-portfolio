@@ -4,12 +4,14 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Tailwind_logo from "../../assets/tailwind.svg";
+import NextJs_logo from "../../assets/nextjs.svg";
 
 const skillsList = [
   { label: "HTML", icon: "fa-brands fa-html5", color: "#e34f26", chip: "#fee2e2", chipDark: "rgba(227,79,38,0.18)" },
   { label: "CSS", icon: "fa-brands fa-css3-alt", color: "#1572b6", chip: "#dbeafe", chipDark: "rgba(21,114,182,0.18)" },
   { label: "Java Script", icon: "fa-brands fa-square-js", color: "#d6a800", chip: "#fef9c3", chipDark: "rgba(247,223,30,0.18)" },
   { label: "React", icon: "fa-brands fa-react", color: "#06b6d4", chip: "#cffafe", chipDark: "rgba(6,182,212,0.18)" },
+  { label: "Next.js", img: NextJs_logo, chip: "#e4e4e7", chipDark: "rgba(255,255,255,0.14)" },
   { label: "Bootstrap", icon: "fa-brands fa-bootstrap", color: "#7c3aed", chip: "#ede9fe", chipDark: "rgba(124,58,237,0.18)" },
   { label: "Tailwind", img: Tailwind_logo, color: "#0d9488", chip: "#ccfbf1", chipDark: "rgba(45,212,191,0.18)" },
   { label: "NPM", icon: "fa-brands fa-npm", color: "#e0234e", chip: "#ffe4e6", chipDark: "rgba(224,35,78,0.18)" },
@@ -26,7 +28,7 @@ const Skills = () => {
       <span className="skillDesc">
         I create user-focused front-end solutions using modern web technologies,
         from reusable UI components to responsive layouts and accessible
-        interactions with HTML, CSS, JavaScript, and React.
+        interactions with HTML, CSS, JavaScript, React, and Next.js.
       </span>
       <div className="skillBars">
         {skillsList.map((skill, index) => (
