@@ -3,6 +3,7 @@ import "./works.css";
 import Uni from "../../assets/uni.jpg";
 import eCommerce from "../../assets/ecommerce-1.jpg";
 import To_do from "../../assets/to-do.jpg";
+import Lamamia from "../../assets/lamamia.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -202,6 +203,71 @@ const Works = () => {
                 </a>
                 <a
                   href="https://mostgiu.github.io/TODO-APP/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link visit-link"
+                >
+                  View Project{" "}
+                  <i className="fa-solid fa-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Project Card 4 - Lamamia */}
+        <div
+          data-aos="fade-right"
+          className="project w-full h-full flex flex-col"
+        >
+          <div className="img-container">
+            <img src={Lamamia} alt="Lamamia" className="worksImg" />
+            <div className="dark-layer"></div>
+            <div className="visit-btn">
+              <a
+                href="https://my-app-murex-iota.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <div className="card-title text-start flex flex-col flex-1">
+            <div className="card-header flex gap-2 items-center mb-3">
+              <h2 className="font-bold text-2xl">Lamamia</h2>
+            </div>
+            <div className="card-desc flex flex-col flex-1">
+              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                A full-stack Next.js app with MongoDB-backed authentication, a
+                blog, and a personal dashboard for creating, managing, and
+                deleting posts.
+              </p>
+              <div className="features-icons flex gap-3 mb-4 flex-wrap">
+                <div className="feature-icon" title="Authentication">
+                  <i className="fa-solid fa-lock"></i>
+                </div>
+                <div className="feature-icon" title="Database">
+                  <i className="fa-solid fa-database"></i>
+                </div>
+                <div className="feature-icon" title="Dashboard">
+                  <i className="fa-solid fa-gauge"></i>
+                </div>
+                <div className="feature-icon" title="Responsive">
+                  <i className="fa-solid fa-mobile"></i>
+                </div>
+              </div>
+              <div className="project-links flex gap-2 mb-2 mt-auto">
+                <a
+                  href="https://github.com/mostgiu/Lama"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link github-link"
+                >
+                  <i className="fa-brands fa-github"></i>
+                  GitHub
+                </a>
+                <a
+                  href="https://my-app-murex-iota.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link visit-link"
