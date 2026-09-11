@@ -116,6 +116,12 @@
   border-bottom: 3px solid var(--color-accent);
 }
 
+.desktopMenuListItem:focus-visible,
+.listItem:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 .desktopMenuListItem.active {
   border-bottom: 3px solid var(--color-accent);
 }
