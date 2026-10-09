@@ -1,0 +1,11 @@
+dist
+node_modules
+.env*
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+desktop
+desktop.pub
+public/Cursor-darwin-arm64.dmg
+public/files (1) 21.30.38.zip

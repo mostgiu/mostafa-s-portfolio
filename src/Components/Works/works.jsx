@@ -4,6 +4,7 @@ import Uni from "../../assets/uni.jpg";
 import eCommerce from "../../assets/ecommerce-1.jpg";
 import To_do from "../../assets/to-do.jpg";
 import Lamamia from "../../assets/lamamia.png";
+import Restaurant from "../../assets/restaurant-ui.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -20,7 +21,7 @@ const Works = () => {
         scalable front-end applications with clean design, practical UX, and
         maintainable code.
       </span>
-      <div className="projects-grid grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="projects-grid">
         {/* Project Card 1 - Personal Portfolio SPA */}
         <div
           data-aos="fade-right"
@@ -83,7 +84,6 @@ const Works = () => {
             </div>
           </div>
         </div>
-
         {/* Project Card 2 - Bazarlo */}
         <div
           data-aos="fade-left"
@@ -268,6 +268,73 @@ const Works = () => {
                 </a>
                 <a
                   href="https://my-app-murex-iota.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link visit-link"
+                >
+                  View Project{" "}
+                  <i className="fa-solid fa-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Project Card 5 - Pizza Primavera */}
+        <div
+          data-aos="fade-left"
+          className="project w-full h-full flex flex-col"
+        >
+          <div className="img-container">
+            <img
+              src={Restaurant}
+              alt="Pizza Primavera restaurant ordering app"
+              className="worksImg"
+            />
+            <div className="dark-layer"></div>
+            <div className="visit-btn">
+              <a
+                href="https://pizza-primavera.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Pizza Primavera live"
+              >
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <div className="card-title text-start flex flex-col flex-1">
+            <div className="card-header flex gap-2 items-center mb-3">
+              <h2 className="font-bold text-2xl">Pizza Primavera</h2>
+            </div>
+            <div className="card-desc flex flex-col flex-1">
+              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                A responsive pizza ordering website built with Next.js,
+                featuring menu browsing, product details, a shopping cart, and
+                order management.
+              </p>
+              <div className="features-icons flex gap-3 mb-4 flex-wrap">
+                <div className="feature-icon" title="Next.js">
+                  <i className="fa-solid fa-code"></i>
+                </div>
+                <div className="feature-icon" title="Shopping Cart">
+                  <i className="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div className="feature-icon" title="Responsive">
+                  <i className="fa-solid fa-mobile"></i>
+                </div>
+              </div>
+              <div className="project-links flex gap-2 mb-2 mt-auto">
+                <a
+                  href="https://github.com/mostgiu/pizza-primavera"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link github-link"
+                >
+                  <i className="fa-brands fa-github"></i>
+                  GitHub
+                </a>
+                <a
+                  href="https://pizza-primavera.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link visit-link"
