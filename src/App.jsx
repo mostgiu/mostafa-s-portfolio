@@ -37,7 +37,7 @@ function App() {
 
   return (
     <>
-      <div className="mx-auto px-4">
+      <div className="app-shell">
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Routes>
           <Route path="/" element={homePage} />

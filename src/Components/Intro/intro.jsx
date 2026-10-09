@@ -25,12 +25,15 @@ const Intro = () => {
           <br />
           experiences with clean UI, solid performance, and accessible UX.
         </p>
-        <a href={cvUrl} download="Mostafa_Saleh_CV.pdf">
-          <button className="btn">
+        <div className="introActions">
+          <a href={cvUrl} download="Mostafa_Saleh_CV.pdf" className="btn">
             <i className="fa-solid fa-download"></i> <span>Download CV</span>
-          </button>
-        </a>
-        <div className="links  flex justify-start">
+          </a>
+          <a href="#works" className="btn secondary">
+            <span>View projects</span>
+          </a>
+        </div>
+        <div className="links">
           <a
             href="https://www.linkedin.com/in/mostafa-saleh-15970a1a6"
             target="_blank"

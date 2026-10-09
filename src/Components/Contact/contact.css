@@ -1,109 +1,103 @@
 #contactPage {
-    /* background and border-radius reverted */
-    min-height: calc(100vh - 4rem);
-    width: 100vw;
-    max-width: 60rem;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 6rem;
-    padding-bottom: 4rem;
-    /* background and border-radius reverted */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 72px 0 56px;
 }
-body.dark .submitBtn {
-  color: black;
-}
-body.dark .submitBtn:hover{
-      color: black;
-      background: rgb(226, 225, 225);
 
-}
 .contactPageTitle {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.clientDesc {
-    font-weight: 300;
-    font-size: 1rem;
-}
-
-.clientImgs {
-    margin: 1rem 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.clientImg {
-    object-fit: cover;
-    width: 23%;
-    min-width: 9rem;
-    margin: auto;
-    padding: 0.25rem;
-}
-
-#clients {
-    padding: 2rem;
+  margin-bottom: 14px;
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 450;
+  letter-spacing: -0.06em;
+  color: var(--color-obsidian);
 }
 
 .contactDesc {
-    padding: 1rem;
-    font-size: medium;
-    font-weight: 300;
-    letter-spacing: 1.4px;
-    line-height: 1.8;
+  max-width: 760px;
+  padding: 0 20px;
+  color: var(--color-stone);
+  font-size: 1.02rem;
+  line-height: 1.8;
 }
 
 .contactForm {
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 90vw;
-    max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(720px, 100%);
+  margin-top: 30px;
+  padding: 0 16px;
 }
 
-.name, .email, .msg {
-    font-size: medium;
-    width: 100%;
-    max-width: 40rem;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    color: var(--color-text);
-    border: 1px solid var(--color-border);
-    border-radius: 0.5rem;
-    background: var(--color-surface);
-    resize: none;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+.name,
+.email,
+.msg {
+  width: 100%;
+  margin: 8px 0;
+  padding: 16px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.name:focus, .email:focus, .msg:focus {
-    outline: none;
-    border-color: var(--color-accent);
+.name:focus,
+.email:focus,
+.msg:focus {
+  outline: none;
+  border-color: var(--color-ash);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.03);
 }
 
 .submitBtn {
-    background: white;
-    color: black;
-    border: none;
-    border-radius: 0.5rem;
-    margin: 2rem;
-    padding: 0.75rem 3.5rem;
+  margin-top: 18px;
+  min-height: 48px;
+  padding: 0 28px;
+  border: 1px solid var(--color-obsidian);
+  border-radius: 9999px;
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-size: 0.92rem;
+  font-weight: 500;
 }
 
-.links {
-    display: flex;
-    flex-wrap: wrap;
+.submitBtn:hover {
+  background: var(--color-text-muted);
 }
 
-.link {
-    object-fit: cover;
-    height: 3rem;
-    width: 3rem;
-    margin: 0 0.75rem;
+.contactPage .links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.contactPage .links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.contactPage .links a:hover {
+  border-color: var(--color-ash);
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 480px) {
+  .contactDesc {
+    font-size: 0.96rem;
+  }
 }
