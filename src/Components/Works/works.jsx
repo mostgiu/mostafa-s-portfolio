@@ -167,10 +167,10 @@ const Works = () => {
             <div className="dark-layer"></div>
             <div className="visit-btn">
               <a
-                href="https://github.com/mostgiu/Lama-store"
+                href="https://lama-store.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="View Lama Store source on GitHub"
+                aria-label="View Lama Store live"
               >
                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
@@ -207,7 +207,16 @@ const Works = () => {
                   className="project-link github-link"
                 >
                   <i className="fa-brands fa-github"></i>
-                  Source Code
+                  GitHub
+                </a>
+                <a
+                  href="https://lama-store.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link visit-link"
+                >
+                  View Project{" "}
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
               </div>
             </div>
