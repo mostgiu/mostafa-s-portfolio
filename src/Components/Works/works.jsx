@@ -2,6 +2,7 @@ import React from "react";
 import "./works.css";
 import Uni from "../../assets/uni.jpg";
 import eCommerce from "../../assets/ecommerce-1.jpg";
+import LamaStore from "../../assets/lama-store-featured.png";
 import Lamamia from "../../assets/lamamia.png";
 import Restaurant from "../../assets/restaurant-ui.jpg";
 import Aos from "aos";
@@ -152,7 +153,77 @@ const Works = () => {
           </div>
         </div>
 
-        {/* Project Card 3 - Lamamia */}
+        {/* Project Card 3 - Lama Store */}
+        <div
+          data-aos="fade-right"
+          className="project w-full h-full flex flex-col"
+        >
+          <div className="img-container">
+            <img
+              src={LamaStore}
+              alt="Lama Store e-commerce storefront"
+              className="worksImg"
+            />
+            <div className="dark-layer"></div>
+            <div className="visit-btn">
+              <a
+                href="https://lama-store.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Lama Store live"
+              >
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <div className="card-title text-start flex flex-col flex-1">
+            <div className="card-header flex gap-2 items-center mb-3">
+              <h2 className="font-bold text-2xl">Lama Store</h2>
+            </div>
+            <div className="card-desc flex flex-col flex-1">
+              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                A modern Next.js e-commerce store for browsing products,
+                exploring product details, and managing a shopping cart.
+              </p>
+              <div className="features-icons flex gap-3 mb-4 flex-wrap">
+                <div className="feature-icon" title="Next.js">
+                  <i className="fa-solid fa-code"></i>
+                </div>
+                <div className="feature-icon" title="Product Catalog">
+                  <i className="fa-solid fa-store"></i>
+                </div>
+                <div className="feature-icon" title="Shopping Cart">
+                  <i className="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div className="feature-icon" title="Responsive">
+                  <i className="fa-solid fa-mobile"></i>
+                </div>
+              </div>
+              <div className="project-links flex gap-2 mb-2 mt-auto">
+                <a
+                  href="https://github.com/mostgiu/Lama-store"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link github-link"
+                >
+                  <i className="fa-brands fa-github"></i>
+                  GitHub
+                </a>
+                <a
+                  href="https://lama-store.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link visit-link"
+                >
+                  View Project{" "}
+                  <i className="fa-solid fa-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Project Card 4 - Lamamia */}
         <div
           data-aos="fade-right"
           className="project w-full h-full flex flex-col"
@@ -217,7 +288,7 @@ const Works = () => {
             </div>
           </div>
         </div>
-        {/* Project Card 4 - Pizza Primavera */}
+        {/* Project Card 5 - Pizza Primavera */}
         <div
           data-aos="fade-left"
           className="project w-full h-full flex flex-col"
