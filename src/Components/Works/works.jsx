@@ -4,7 +4,7 @@ import Uni from "../../assets/uni.jpg";
 import eCommerce from "../../assets/ecommerce-1.jpg";
 import LamaStore from "../../assets/lama-store-featured.png";
 import Lamamia from "../../assets/lamamia.png";
-import Restaurant from "../../assets/restaurant-ui.jpg";
+import PizzaPrimaveraThumbnail from "../../assets/pizza-primavera-thumbnail.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -295,7 +295,7 @@ const Works = () => {
         >
           <div className="img-container">
             <img
-              src={Restaurant}
+              src={PizzaPrimaveraThumbnail}
               alt="Pizza Primavera restaurant ordering app"
               className="worksImg"
             />
