@@ -167,7 +167,7 @@ const Works = () => {
             <div className="dark-layer"></div>
             <div className="visit-btn">
               <a
-                href="https://lama-store.vercel.app"
+                href="https://lamastore-mysjw50jg-mostafas-projects-e0563a56.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View Lama Store live"
@@ -210,7 +210,7 @@ const Works = () => {
                   GitHub
                 </a>
                 <a
-                  href="https://lama-store.vercel.app"
+                  href="https://lamastore-mysjw50jg-mostafas-projects-e0563a56.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link visit-link"
