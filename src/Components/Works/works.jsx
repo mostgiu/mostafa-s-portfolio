@@ -1,7 +1,7 @@
 import React from "react";
 import "./works.css";
 import Uni from "../../assets/uni.jpg";
-import eCommerce from "../../assets/ecommerce-1.jpg";
+import BazarloThumbnail from "../../assets/e-commerce-2.jpg";
 import LamaStore from "../../assets/lama-store-featured.png";
 import Lamamia from "../../assets/lamamia.png";
 import PizzaPrimaveraThumbnail from "../../assets/pizza-primavera-thumbnail.jpg";
@@ -90,7 +90,11 @@ const Works = () => {
           className="project w-full h-full flex flex-col"
         >
           <div className="img-container">
-            <img src={eCommerce} alt="" className="worksImg" />
+            <img
+              src={BazarloThumbnail}
+              alt="Shopping bag and cart for the Bazarlo e-commerce store"
+              className="worksImg"
+            />
             <div className="dark-layer"></div>
             <div className="visit-btn">
               <a
