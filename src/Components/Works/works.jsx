@@ -4,6 +4,8 @@ import Uni from "../../assets/uni.jpg";
 import BazarloThumbnail from "../../assets/e-commerce-2.jpg";
 import Vendora from "../../assets/vendora.png";
 import Inkora from "../../assets/inkora.png";
+import VendoraLogo from "../../assets/vendora-logo.svg";
+import InkoraLogo from "../../assets/inkora-logo.svg";
 import PizzaPrimaveraThumbnail from "../../assets/pizza-primavera-thumbnail.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -182,6 +184,7 @@ const Works = () => {
           </div>
           <div className="card-title text-start flex flex-col flex-1">
             <div className="card-header flex gap-2 items-center mb-3">
+              <img src={VendoraLogo} alt="" className="card-logo" />
               <h2 className="font-bold text-2xl">Vendora</h2>
             </div>
             <div className="card-desc flex flex-col flex-1">
@@ -247,6 +250,7 @@ const Works = () => {
           </div>
           <div className="card-title text-start flex flex-col flex-1">
             <div className="card-header flex gap-2 items-center mb-3">
+              <img src={InkoraLogo} alt="" className="card-logo" />
               <h2 className="font-bold text-2xl">Inkora</h2>
             </div>
             <div className="card-desc flex flex-col flex-1">
