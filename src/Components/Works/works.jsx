@@ -12,431 +12,153 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
+// Ordered by strength: the first cards are what recruiters see first.
+const projects = [
+  {
+    title: "Inkora",
+    logo: InkoraLogo,
+    image: Inkora,
+    alt: "Inkora blog with a personal dashboard for managing posts",
+    description:
+      "A full-stack Next.js app with MongoDB-backed authentication, a blog, and a personal dashboard for creating, managing, and deleting posts.",
+    tags: ["Next.js", "MongoDB", "Authentication", "Dashboard", "Responsive"],
+    github: "https://github.com/mostgiu/inkora",
+    live: "https://inkora-blog.vercel.app",
+  },
+  {
+    title: "Vendora",
+    logo: VendoraLogo,
+    image: Vendora,
+    alt: "Vendora e-commerce storefront",
+    description:
+      "A modern Next.js e-commerce store for browsing products, exploring product details, and managing a shopping cart.",
+    tags: ["Next.js", "Product Catalog", "Shopping Cart", "Responsive"],
+    github: "https://github.com/mostgiu/vendora",
+    live: "https://vendora-fashion.vercel.app",
+  },
+  {
+    title: "Bazarlo",
+    image: BazarloThumbnail,
+    alt: "Shopping bag and cart for the Bazarlo e-commerce store",
+    description:
+      "A fully functional e-commerce platform built with React. Features product browsing, shopping cart management, checkout process, and responsive design for seamless shopping experience.",
+    tags: ["React", "State Management", "Cart System", "Checkout", "Responsive"],
+    github: "https://github.com/mostgiu/E-commerce",
+    live: "https://bazarlo.vercel.app",
+  },
+  {
+    title: "NewsMag",
+    image: NewsMagThumbnail,
+    alt: "NewsMag news app showing the latest headlines",
+    description:
+      "A React news app built with Bootstrap and the NewsAPI, featuring live headlines by category, keyword search, and a responsive card grid with loading and error states.",
+    tags: ["React", "Bootstrap", "REST API", "Search", "Responsive"],
+    github: "https://github.com/mostgiu/newsmag",
+    live: "https://newsmag-black.vercel.app",
+  },
+  {
+    title: "Pizza Primavera",
+    image: PizzaPrimaveraThumbnail,
+    alt: "Pizza Primavera restaurant ordering app",
+    description:
+      "A responsive pizza ordering website built with Next.js, featuring menu browsing, product details, a shopping cart, and order management.",
+    tags: ["Next.js", "Shopping Cart", "Responsive"],
+    github: "https://github.com/mostgiu/pizza-primavera",
+    live: "https://pizza-primavera.vercel.app",
+  },
+  {
+    title: "Educity",
+    image: Uni,
+    alt: "Educity university website homepage",
+    description:
+      "A modern educational website with a clean interface, responsive layout, and smooth user experience focused on showcasing courses and campus information.",
+    tags: ["UI Design", "Performance", "Responsive"],
+    github: "https://github.com/mostgiu/Educity",
+    live: "https://educity-ruddy.vercel.app/",
+  },
+];
+
+const ProjectCard = ({ project, index }) => {
+  const { title, logo, image, alt, description, tags, github, live } = project;
+
+  return (
+    <div
+      data-aos="fade-up"
+      data-aos-delay={(index % 3) * 100}
+      className="project w-full h-full flex flex-col"
+    >
+      <div className="img-container">
+        <img src={image} alt={alt} className="worksImg" loading="lazy" />
+        <div className="dark-layer"></div>
+        <div className="visit-btn">
+          <a
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View ${title} live`}
+          >
+            <i className="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+      <div className="card-title text-start flex flex-col flex-1">
+        <div className="card-header flex gap-2 items-center mb-3">
+          {logo && <img src={logo} alt="" className="card-logo" />}
+          <h3 className="font-bold text-2xl">{title}</h3>
+        </div>
+        <div className="card-desc flex flex-col flex-1">
+          <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+            {description}
+          </p>
+          <ul className="tech-tags">
+            {tags.map((tag) => (
+              <li key={tag} className="tech-tag">
+                {tag}
+              </li>
+            ))}
+          </ul>
+          <div className="project-links flex gap-2 mb-2 mt-auto">
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link github-link"
+            >
+              <i className="fa-brands fa-github"></i>
+              GitHub
+            </a>
+            <a
+              href={live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link visit-link"
+            >
+              View Project{" "}
+              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Works = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
   return (
     <section id="works">
-      <h2 className="worksTitle">My Portfolio</h2>
+      <h2 className="worksTitle">Selected Projects</h2>
       <span className="worksDesc">
         A selection of projects that demonstrates my approach to building
         scalable front-end applications with clean design, practical UX, and
         maintainable code.
       </span>
       <div className="projects-grid">
-        {/* Project Card 1 - Personal Portfolio SPA */}
-        <div
-          data-aos="fade-right"
-          className="project w-full h-full flex flex-col"
-        >
-          <div className="img-container">
-            <img src={Uni} alt="Educity" className="worksImg" />
-            <div className="dark-layer"></div>
-            <div className="visit-btn">
-              <a
-                href="https://educity-ruddy.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-          <div className="card-title text-start flex flex-col flex-1">
-            <div className="card-header flex gap-2 items-center mb-3">
-              <h2 className="font-bold text-2xl">Educity</h2>
-            </div>
-            <div className="card-desc flex flex-col flex-1">
-              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-                A modern educational website with a clean interface, responsive
-                layout, and smooth user experience focused on showcasing courses
-                and campus information.
-              </p>
-              <div className="features-icons flex gap-3 mb-4 flex-wrap">
-                <div className="feature-icon" title="Responsive">
-                  <i className="fa-solid fa-mobile"></i>
-                </div>
-                <div className="feature-icon" title="UI Design">
-                  <i className="fa-solid fa-palette"></i>
-                </div>
-                <div className="feature-icon" title="Performance">
-                  <i className="fa-solid fa-gauge"></i>
-                </div>
-              </div>
-              <div className="project-links flex gap-2 mb-2 mt-auto">
-                <a
-                  href="https://github.com/mostgiu/Educity"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link github-link"
-                >
-                  <i className="fa-brands fa-github"></i>
-                  GitHub
-                </a>
-                <a
-                  href="https://educity-ruddy.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link visit-link"
-                >
-                  View Project{" "}
-                  <i className="fa-solid fa-up-right-from-square"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Project Card 2 - Bazarlo */}
-        <div
-          data-aos="fade-left"
-          className="project w-full h-full flex flex-col"
-        >
-          <div className="img-container">
-            <img
-              src={BazarloThumbnail}
-              alt="Shopping bag and cart for the Bazarlo e-commerce store"
-              className="worksImg"
-            />
-            <div className="dark-layer"></div>
-            <div className="visit-btn">
-              <a
-                href="https://bazarlo.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-          <div className="card-title text-start flex flex-col flex-1">
-            <div className="card-header flex gap-2 items-center mb-3">
-              <h2 className="font-bold text-2xl">Bazarlo</h2>
-            </div>
-            <div className="card-desc flex flex-col flex-1">
-              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-                A fully functional e-commerce platform built with React.
-                Features product browsing, shopping cart management, checkout
-                process, and responsive design for seamless shopping experience.
-              </p>
-              <div className="features-icons flex gap-3 mb-4 flex-wrap">
-                <div className="feature-icon" title="React">
-                  <i className="fa-brands fa-react"></i>
-                </div>
-                <div className="feature-icon" title="State Management">
-                  <i className="fa-solid fa-database"></i>
-                </div>
-                <div className="feature-icon" title="Responsive">
-                  <i className="fa-solid fa-mobile"></i>
-                </div>
-                <div className="feature-icon" title="Cart System">
-                  <i className="fa-solid fa-cart-shopping"></i>
-                </div>
-                <div className="feature-icon" title="Payments">
-                  <i className="fa-solid fa-credit-card"></i>
-                </div>
-              </div>
-              <div className="project-links flex gap-2 mb-2 mt-auto">
-                <a
-                  href="https://github.com/mostgiu/E-commerce"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link github-link"
-                >
-                  <i className="fa-brands fa-github"></i>
-                  GitHub
-                </a>
-                <a
-                  href="https://bazarlo.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link visit-link"
-                >
-                  View Project{" "}
-                  <i className="fa-solid fa-up-right-from-square"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Project Card 3 - Vendora */}
-        <div
-          data-aos="fade-right"
-          className="project w-full h-full flex flex-col"
-        >
-          <div className="img-container">
-            <img
-              src={Vendora}
-              alt="Vendora e-commerce storefront"
-              className="worksImg"
-            />
-            <div className="dark-layer"></div>
-            <div className="visit-btn">
-              <a
-                href="https://vendora-fashion.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Vendora live"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-          <div className="card-title text-start flex flex-col flex-1">
-            <div className="card-header flex gap-2 items-center mb-3">
-              <img src={VendoraLogo} alt="" className="card-logo" />
-              <h2 className="font-bold text-2xl">Vendora</h2>
-            </div>
-            <div className="card-desc flex flex-col flex-1">
-              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-                A modern Next.js e-commerce store for browsing products,
-                exploring product details, and managing a shopping cart.
-              </p>
-              <div className="features-icons flex gap-3 mb-4 flex-wrap">
-                <div className="feature-icon" title="Next.js">
-                  <i className="fa-solid fa-code"></i>
-                </div>
-                <div className="feature-icon" title="Product Catalog">
-                  <i className="fa-solid fa-store"></i>
-                </div>
-                <div className="feature-icon" title="Shopping Cart">
-                  <i className="fa-solid fa-cart-shopping"></i>
-                </div>
-                <div className="feature-icon" title="Responsive">
-                  <i className="fa-solid fa-mobile"></i>
-                </div>
-              </div>
-              <div className="project-links flex gap-2 mb-2 mt-auto">
-                <a
-                  href="https://github.com/mostgiu/vendora"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link github-link"
-                >
-                  <i className="fa-brands fa-github"></i>
-                  GitHub
-                </a>
-                <a
-                  href="https://vendora-fashion.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link visit-link"
-                >
-                  View Project{" "}
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Project Card 4 - Inkora */}
-        <div
-          data-aos="fade-right"
-          className="project w-full h-full flex flex-col"
-        >
-          <div className="img-container">
-            <img src={Inkora} alt="Inkora" className="worksImg" />
-            <div className="dark-layer"></div>
-            <div className="visit-btn">
-              <a
-                href="https://inkora-blog.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-          <div className="card-title text-start flex flex-col flex-1">
-            <div className="card-header flex gap-2 items-center mb-3">
-              <img src={InkoraLogo} alt="" className="card-logo" />
-              <h2 className="font-bold text-2xl">Inkora</h2>
-            </div>
-            <div className="card-desc flex flex-col flex-1">
-              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-                A full-stack Next.js app with MongoDB-backed authentication, a
-                blog, and a personal dashboard for creating, managing, and
-                deleting posts.
-              </p>
-              <div className="features-icons flex gap-3 mb-4 flex-wrap">
-                <div className="feature-icon" title="Authentication">
-                  <i className="fa-solid fa-lock"></i>
-                </div>
-                <div className="feature-icon" title="Database">
-                  <i className="fa-solid fa-database"></i>
-                </div>
-                <div className="feature-icon" title="Dashboard">
-                  <i className="fa-solid fa-gauge"></i>
-                </div>
-                <div className="feature-icon" title="Responsive">
-                  <i className="fa-solid fa-mobile"></i>
-                </div>
-              </div>
-              <div className="project-links flex gap-2 mb-2 mt-auto">
-                <a
-                  href="https://github.com/mostgiu/inkora"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link github-link"
-                >
-                  <i className="fa-brands fa-github"></i>
-                  GitHub
-                </a>
-                <a
-                  href="https://inkora-blog.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link visit-link"
-                >
-                  View Project{" "}
-                  <i className="fa-solid fa-up-right-from-square"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Project Card 5 - Pizza Primavera */}
-        <div
-          data-aos="fade-left"
-          className="project w-full h-full flex flex-col"
-        >
-          <div className="img-container">
-            <img
-              src={PizzaPrimaveraThumbnail}
-              alt="Pizza Primavera restaurant ordering app"
-              className="worksImg"
-            />
-            <div className="dark-layer"></div>
-            <div className="visit-btn">
-              <a
-                href="https://pizza-primavera.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Pizza Primavera live"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-          <div className="card-title text-start flex flex-col flex-1">
-            <div className="card-header flex gap-2 items-center mb-3">
-              <h2 className="font-bold text-2xl">Pizza Primavera</h2>
-            </div>
-            <div className="card-desc flex flex-col flex-1">
-              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-                A responsive pizza ordering website built with Next.js,
-                featuring menu browsing, product details, a shopping cart, and
-                order management.
-              </p>
-              <div className="features-icons flex gap-3 mb-4 flex-wrap">
-                <div className="feature-icon" title="Next.js">
-                  <i className="fa-solid fa-code"></i>
-                </div>
-                <div className="feature-icon" title="Shopping Cart">
-                  <i className="fa-solid fa-cart-shopping"></i>
-                </div>
-                <div className="feature-icon" title="Responsive">
-                  <i className="fa-solid fa-mobile"></i>
-                </div>
-              </div>
-              <div className="project-links flex gap-2 mb-2 mt-auto">
-                <a
-                  href="https://github.com/mostgiu/pizza-primavera"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link github-link"
-                >
-                  <i className="fa-brands fa-github"></i>
-                  GitHub
-                </a>
-                <a
-                  href="https://pizza-primavera.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link visit-link"
-                >
-                  View Project{" "}
-                  <i className="fa-solid fa-up-right-from-square"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Project Card 6 - NewsMag */}
-        <div
-          data-aos="fade-right"
-          className="project w-full h-full flex flex-col"
-        >
-          <div className="img-container">
-            <img
-              src={NewsMagThumbnail}
-              alt="NewsMag news app showing the latest headlines"
-              className="worksImg"
-            />
-            <div className="dark-layer"></div>
-            <div className="visit-btn">
-              <a
-                href="https://newsmag-black.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View NewsMag live"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-          <div className="card-title text-start flex flex-col flex-1">
-            <div className="card-header flex gap-2 items-center mb-3">
-              <h2 className="font-bold text-2xl">NewsMag</h2>
-            </div>
-            <div className="card-desc flex flex-col flex-1">
-              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-                A React news app built with Bootstrap and the NewsAPI, featuring
-                live headlines by category, keyword search, and a responsive
-                card grid with loading and error states.
-              </p>
-              <div className="features-icons flex gap-3 mb-4 flex-wrap">
-                <div className="feature-icon" title="React">
-                  <i className="fa-brands fa-react"></i>
-                </div>
-                <div className="feature-icon" title="Bootstrap">
-                  <i className="fa-brands fa-bootstrap"></i>
-                </div>
-                <div className="feature-icon" title="REST API">
-                  <i className="fa-solid fa-newspaper"></i>
-                </div>
-                <div className="feature-icon" title="Search">
-                  <i className="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div className="feature-icon" title="Responsive">
-                  <i className="fa-solid fa-mobile"></i>
-                </div>
-              </div>
-              <div className="project-links flex gap-2 mb-2 mt-auto">
-                <a
-                  href="https://github.com/mostgiu/newsmag"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link github-link"
-                >
-                  <i className="fa-brands fa-github"></i>
-                  GitHub
-                </a>
-                <a
-                  href="https://newsmag-black.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link visit-link"
-                >
-                  View Project{" "}
-                  <i className="fa-solid fa-up-right-from-square"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        {projects.map((project, index) => (
+          <ProjectCard key={project.title} project={project} index={index} />
+        ))}
       </div>
     </section>
   );
