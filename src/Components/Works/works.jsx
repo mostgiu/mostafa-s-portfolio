@@ -376,6 +376,16 @@ const Works = () => {
               className="worksImg"
             />
             <div className="dark-layer"></div>
+            <div className="visit-btn">
+              <a
+                href="https://newsmag-black.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View NewsMag live"
+              >
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
           </div>
           <div className="card-title text-start flex flex-col flex-1">
             <div className="card-header flex gap-2 items-center mb-3">
@@ -403,6 +413,26 @@ const Works = () => {
                 <div className="feature-icon" title="Responsive">
                   <i className="fa-solid fa-mobile"></i>
                 </div>
+              </div>
+              <div className="project-links flex gap-2 mb-2 mt-auto">
+                <a
+                  href="https://github.com/mostgiu/newsmag"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link github-link"
+                >
+                  <i className="fa-brands fa-github"></i>
+                  GitHub
+                </a>
+                <a
+                  href="https://newsmag-black.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link visit-link"
+                >
+                  View Project{" "}
+                  <i className="fa-solid fa-up-right-from-square"></i>
+                </a>
               </div>
             </div>
           </div>
