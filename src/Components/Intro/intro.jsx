@@ -1,28 +1,22 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./intro.css";
 import bg from "../../assets/bg.png";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import "animate.css";
-
+import SocialLinks from "../SocialLinks/SocialLinks";
 
 const Intro = () => {
   const cvUrl = `${import.meta.env.BASE_URL}Mostafa_Saleh_Frontend_Resume_Updated.pdf`;
 
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
   return (
-    <section className="intro" id="intro" style={{ "--intro-bg-image": `url(${bg})` }}>
-      <div className="introContent animate__animated animate__bounceInLeft">
+    <section className="intro" id="intro">
+      <div className="introContent animate__animated animate__fadeInUp">
         <span className="hello">Hello,</span>
-        <span className="introText">
-          I'm <span className="introName animate__animated animate__bounce">Mostafa</span> <br />
+        <h1 className="introText">
+          I'm <span className="introName">Mostafa</span> <br />
           Front End Developer
-        </span>
+        </h1>
         <p className="introPara">
           Front-end developer focused on building modern, responsive web
-          <br />
           experiences with clean UI, solid performance, and accessible UX.
         </p>
         <div className="introActions">
@@ -33,29 +27,13 @@ const Intro = () => {
             <span>View projects</span>
           </a>
         </div>
-        <div className="links">
-          <a
-            href="https://www.linkedin.com/in/mostafa-saleh-15970a1a6"
-            target="_blank"
-          >
-            <i className="fa-brands fa-linkedin text-4xl text-blue-500"></i>
-          </a>
-          <a target="_blank" href="https://github.com/mostgiu">
-            <i className="fa-brands fa-github text-4xl"></i>
-          </a>
-          <a target="_blank" href="https://wa.me/393248860529">
-            <i className="fa-brands fa-whatsapp text-4xl text-green-500"></i>
-          </a>
-          <a href="mailto:mostafakamal.mk966@gmail.com">
-            <i className="fa-solid fa-envelope text-4xl text-red-500"></i>
-          </a>
-        </div>
+        <SocialLinks />
       </div>
       <div className="introImageWrap" data-aos="fade-left">
         <img
           src={bg}
-          alt="Profile"
-          className="introImage rounded-2xl animate__animated animate__fadeInRight"
+          alt="Mostafa Saleh standing on a bridge by the river"
+          className="introImage rounded-2xl"
         />
       </div>
     </section>

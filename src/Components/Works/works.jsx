@@ -8,9 +8,6 @@ import VendoraLogo from "../../assets/vendora-logo.svg";
 import InkoraLogo from "../../assets/inkora-logo.svg";
 import PizzaPrimaveraThumbnail from "../../assets/pizza-primavera-thumbnail.jpg";
 import NewsMagThumbnail from "../../assets/newsmag.jpg";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 // Ordered by strength: the first cards are what recruiters see first.
 const projects = [
@@ -144,9 +141,6 @@ const ProjectCard = ({ project, index }) => {
 };
 
 const Works = () => {
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
   return (
     <section id="works">
       <h2 className="worksTitle">Selected Projects</h2>

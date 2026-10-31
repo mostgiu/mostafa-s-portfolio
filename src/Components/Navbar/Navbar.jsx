@@ -3,8 +3,6 @@ import "./navbar.css";
 import logoDark from "../../assets/logoDark.png";
 import logoLight from "../../assets/logo.png";
 import { NavLink, useLocation } from "react-router-dom";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -21,9 +19,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       ? activeSection
       : routeToSection[location.pathname] || "intro";
   
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
 
   useEffect(() => {
     // Keep a high-contrast favicon for better visibility in browser tabs

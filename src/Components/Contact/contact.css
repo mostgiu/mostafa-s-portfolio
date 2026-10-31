@@ -71,6 +71,11 @@
   background: var(--color-text-muted);
 }
 
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .contactPage .links {
   display: flex;
   flex-wrap: wrap;

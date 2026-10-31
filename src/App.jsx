@@ -12,7 +12,11 @@ import BackToTop from "./Components/BackToTop/BackToTop";
 import { Route, Routes, useLocation } from "react-router-dom";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem("darkMode");
+    if (saved !== null) return saved === "true";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
   const location = useLocation();
   const homePage = (
     <>
@@ -24,11 +28,12 @@ function App() {
   );
 
   useEffect(() => {
-    Aos.init();
+    Aos.init({ duration: 1000, once: true });
   }, []);
 
   useEffect(() => {
     document.body.classList.toggle("dark", darkMode);
+    localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
 
   useEffect(() => {
