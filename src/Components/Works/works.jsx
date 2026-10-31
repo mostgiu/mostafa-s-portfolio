@@ -7,6 +7,7 @@ import Inkora from "../../assets/inkora.png";
 import VendoraLogo from "../../assets/vendora-logo.svg";
 import InkoraLogo from "../../assets/inkora-logo.svg";
 import PizzaPrimaveraThumbnail from "../../assets/pizza-primavera-thumbnail.jpg";
+import NewsMagThumbnail from "../../assets/newsmag.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -359,6 +360,49 @@ const Works = () => {
                   View Project{" "}
                   <i className="fa-solid fa-up-right-from-square"></i>
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Project Card 6 - NewsMag */}
+        <div
+          data-aos="fade-right"
+          className="project w-full h-full flex flex-col"
+        >
+          <div className="img-container">
+            <img
+              src={NewsMagThumbnail}
+              alt="NewsMag news app showing the latest headlines"
+              className="worksImg"
+            />
+            <div className="dark-layer"></div>
+          </div>
+          <div className="card-title text-start flex flex-col flex-1">
+            <div className="card-header flex gap-2 items-center mb-3">
+              <h2 className="font-bold text-2xl">NewsMag</h2>
+            </div>
+            <div className="card-desc flex flex-col flex-1">
+              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                A React news app built with Bootstrap and the NewsAPI, featuring
+                live headlines by category, keyword search, and a responsive
+                card grid with loading and error states.
+              </p>
+              <div className="features-icons flex gap-3 mb-4 flex-wrap">
+                <div className="feature-icon" title="React">
+                  <i className="fa-brands fa-react"></i>
+                </div>
+                <div className="feature-icon" title="Bootstrap">
+                  <i className="fa-brands fa-bootstrap"></i>
+                </div>
+                <div className="feature-icon" title="REST API">
+                  <i className="fa-solid fa-newspaper"></i>
+                </div>
+                <div className="feature-icon" title="Search">
+                  <i className="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div className="feature-icon" title="Responsive">
+                  <i className="fa-solid fa-mobile"></i>
+                </div>
               </div>
             </div>
           </div>
