@@ -46,14 +46,12 @@ const Contact = () => {
           Let’s connect to discuss freelance projects, full-time opportunities,
           or potential collaborations.
         </span>
-        <form className="contactForm" onSubmit={onSubmit}>
+        <form className="contactForm" onSubmit={onSubmit} data-aos="fade-up">
           <label htmlFor="contact-name" className="sr-only">
             Your name
           </label>
           <input
             id="contact-name"
-            data-aos="fade-up"
-            data-aos-delay="0"
             type="text"
             className="name"
             placeholder="Your name"
@@ -66,8 +64,6 @@ const Contact = () => {
           </label>
           <input
             id="contact-email"
-            data-aos="fade-up"
-            data-aos-delay="150"
             type="email"
             className="email"
             placeholder="Your Email"
@@ -80,8 +76,6 @@ const Contact = () => {
           </label>
           <textarea
             id="contact-message"
-            data-aos="fade-up"
-            data-aos-delay="300"
             name="message"
             placeholder="Your Message"
             rows={5}
@@ -89,8 +83,6 @@ const Contact = () => {
             required
           ></textarea>
           <button
-            data-aos="fade-up"
-            data-aos-delay="450"
             type="submit"
             className="submitBtn"
             disabled={sending}

@@ -137,8 +137,17 @@
 
 .mobMenu {
  display: none !important;
+ align-items: center;
+ padding: 6px;
+ border: 0;
+ background: none;
  font-size: 1.2rem;
+ line-height: 1;
  color: var(--color-obsidian);
+}
+
+.mobMenu:hover {
+ background: none;
 }
 
 .navMenu {

@@ -1,7 +1,7 @@
 import React from "react";
 import "./intro.css";
-import bg from "../../assets/bg.png";
-import "animate.css";
+import Icon from "../Icon/Icon";
+import bg from "../../assets/bg.jpg";
 import SocialLinks from "../SocialLinks/SocialLinks";
 
 const Intro = () => {
@@ -9,7 +9,7 @@ const Intro = () => {
 
   return (
     <section className="intro" id="intro">
-      <div className="introContent animate__animated animate__fadeInUp">
+      <div className="introContent">
         <span className="hello">Hello,</span>
         <h1 className="introText">
           I'm <span className="introName">Mostafa</span> <br />
@@ -21,7 +21,7 @@ const Intro = () => {
         </p>
         <div className="introActions">
           <a href={cvUrl} download="Mostafa_Saleh_CV.pdf" className="btn">
-            <i className="fa-solid fa-download"></i> <span>Download CV</span>
+            <Icon name="download" /> <span>Download CV</span>
           </a>
           <a href="#works" className="btn secondary">
             <span>View projects</span>
@@ -29,11 +29,14 @@ const Intro = () => {
         </div>
         <SocialLinks />
       </div>
-      <div className="introImageWrap" data-aos="fade-left">
+      <div className="introImageWrap">
         <img
           src={bg}
           alt="Mostafa Saleh standing on a bridge by the river"
           className="introImage rounded-2xl"
+          width="880"
+          height="1173"
+          fetchPriority="high"
         />
       </div>
     </section>

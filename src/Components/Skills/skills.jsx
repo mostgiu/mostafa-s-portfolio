@@ -1,25 +1,26 @@
 import React from "react";
 import "./skills.css";
+import Icon from "../Icon/Icon";
 import Tailwind_logo from "../../assets/tailwind.svg";
 import NextJs_logo from "../../assets/nextjs.svg";
 
 const skillsList = [
-  { label: "HTML", icon: "fa-brands fa-html5", color: "#e34f26", chip: "#fee2e2", chipDark: "rgba(227,79,38,0.18)" },
-  { label: "CSS", icon: "fa-brands fa-css3-alt", color: "#1572b6", chip: "#dbeafe", chipDark: "rgba(21,114,182,0.18)" },
-  { label: "JavaScript", icon: "fa-brands fa-square-js", color: "#d6a800", chip: "#fef9c3", chipDark: "rgba(247,223,30,0.18)" },
-  { label: "React", icon: "fa-brands fa-react", color: "#06b6d4", chip: "#cffafe", chipDark: "rgba(6,182,212,0.18)" },
+  { label: "HTML", icon: "html5", color: "#e34f26", chip: "#fee2e2", chipDark: "rgba(227,79,38,0.18)" },
+  { label: "CSS", icon: "css3-alt", color: "#1572b6", chip: "#dbeafe", chipDark: "rgba(21,114,182,0.18)" },
+  { label: "JavaScript", icon: "square-js", color: "#d6a800", chip: "#fef9c3", chipDark: "rgba(247,223,30,0.18)" },
+  { label: "React", icon: "react", color: "#06b6d4", chip: "#cffafe", chipDark: "rgba(6,182,212,0.18)" },
   { label: "Next.js", img: NextJs_logo, chip: "#e4e4e7", chipDark: "rgba(255,255,255,0.14)" },
-  { label: "MongoDB", icon: "fa-solid fa-leaf", color: "#16a34a", chip: "#dcfce7", chipDark: "rgba(22,163,74,0.18)" },
-  { label: "REST APIs", icon: "fa-solid fa-plug", color: "#475569", chip: "#e2e8f0", chipDark: "rgba(148,163,184,0.18)" },
-  { label: "Bootstrap", icon: "fa-brands fa-bootstrap", color: "#7c3aed", chip: "#ede9fe", chipDark: "rgba(124,58,237,0.18)" },
+  { label: "MongoDB", icon: "leaf", color: "#16a34a", chip: "#dcfce7", chipDark: "rgba(22,163,74,0.18)" },
+  { label: "REST APIs", icon: "plug", color: "#475569", chip: "#e2e8f0", chipDark: "rgba(148,163,184,0.18)" },
+  { label: "Bootstrap", icon: "bootstrap", color: "#7c3aed", chip: "#ede9fe", chipDark: "rgba(124,58,237,0.18)" },
   { label: "Tailwind", img: Tailwind_logo, color: "#0d9488", chip: "#ccfbf1", chipDark: "rgba(45,212,191,0.18)" },
-  { label: "NPM", icon: "fa-brands fa-npm", color: "#e0234e", chip: "#ffe4e6", chipDark: "rgba(224,35,78,0.18)" },
-  { label: "Git", icon: "fa-brands fa-git-alt", color: "#f05033", chip: "#ffedd5", chipDark: "rgba(240,80,51,0.18)" },
+  { label: "NPM", icon: "npm", color: "#e0234e", chip: "#ffe4e6", chipDark: "rgba(224,35,78,0.18)" },
+  { label: "Git", icon: "git-alt", color: "#f05033", chip: "#ffedd5", chipDark: "rgba(240,80,51,0.18)" },
 ];
 
 const Skills = () => {
   return (
-    <section data-aos="zoom-in-down" id="skills">
+    <section id="skills">
       <span className="skillTitle">What I do</span>
       <span className="skillDesc">
         I create user-focused front-end solutions using modern web technologies,
@@ -32,7 +33,7 @@ const Skills = () => {
             key={skill.label}
             className="skillBar"
             data-aos="fade-up"
-            data-aos-delay={index * 100}
+            data-aos-delay={index * 60}
           >
             <div
               className="skill-chip"
@@ -45,7 +46,7 @@ const Skills = () => {
               {skill.img ? (
                 <img src={skill.img} alt={skill.label} />
               ) : (
-                <i className={skill.icon}></i>
+                <Icon name={skill.icon} />
               )}
             </div>
             <div className="skillBarText">

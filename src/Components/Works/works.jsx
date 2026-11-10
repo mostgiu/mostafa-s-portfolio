@@ -1,5 +1,6 @@
 import React from "react";
 import "./works.css";
+import Icon from "../Icon/Icon";
 import Uni from "../../assets/uni.jpg";
 import BazarloThumbnail from "../../assets/e-commerce-2.jpg";
 import Vendora from "../../assets/vendora.png";
@@ -81,7 +82,7 @@ const ProjectCard = ({ project, index }) => {
   return (
     <div
       data-aos="fade-up"
-      data-aos-delay={(index % 3) * 100}
+      data-aos-delay={(index % 3) * 80}
       className="project w-full h-full flex flex-col"
     >
       <div className="img-container">
@@ -94,17 +95,17 @@ const ProjectCard = ({ project, index }) => {
             rel="noopener noreferrer"
             aria-label={`View ${title} live`}
           >
-            <i className="fa-solid fa-arrow-up-right-from-square"></i>
+            <Icon name="arrow-up-right-from-square" />
           </a>
         </div>
       </div>
       <div className="card-title text-start flex flex-col flex-1">
         <div className="card-header flex gap-2 items-center mb-2">
           {logo && <img src={logo} alt="" className="card-logo" />}
-          <h3 className="font-bold text-2xl">{title}</h3>
+          <h3>{title}</h3>
         </div>
         <div className="card-desc flex flex-col flex-1">
-          <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+          <p>
             {description}
           </p>
           <ul className="tech-tags">
@@ -121,7 +122,7 @@ const ProjectCard = ({ project, index }) => {
               rel="noopener noreferrer"
               className="project-link github-link"
             >
-              <i className="fa-brands fa-github"></i>
+              <Icon name="github" />
               GitHub
             </a>
             <a
@@ -131,7 +132,7 @@ const ProjectCard = ({ project, index }) => {
               className="project-link visit-link"
             >
               View Project{" "}
-              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              <Icon name="arrow-up-right-from-square" />
             </a>
           </div>
         </div>

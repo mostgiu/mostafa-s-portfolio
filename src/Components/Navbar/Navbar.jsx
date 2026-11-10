@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
+import Icon from "../Icon/Icon";
 import logoDark from "../../assets/logoDark.png";
 import logoLight from "../../assets/logo.png";
 import { NavLink, useLocation } from "react-router-dom";
@@ -105,7 +106,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   };
 
   return (
-    <nav data-aos="fade-down" className="navbar">
+    <nav className="navbar">
       <NavLink to="/" end className="cursor-pointer">
         <img src={darkMode ? logoDark : logoLight} alt="Logo" className="logo" />
       </NavLink>
@@ -134,18 +135,23 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       >
         <span className="switch-track"></span>
         <span className="switch-icon switch-sun">
-          <i className="fa-solid fa-sun"></i>
+          <Icon name="sun" />
         </span>
         <span className="switch-icon switch-moon">
-          <i className="fa-solid fa-moon"></i>
+          <Icon name="moon" />
         </span>
         <span className="switch-thumb"></span>
       </button>
 
-      <i
+      <button
+        type="button"
+        className="mobMenu"
         onClick={() => setShowMenu(!showMenu)}
-        className="fa-solid fa-bars mobMenu"
-      ></i>
+        aria-label={showMenu ? "Close menu" : "Open menu"}
+        aria-expanded={showMenu}
+      >
+        <Icon name="bars" />
+      </button>
       <div className="navMenu" style={{ display: showMenu ? "flex" : "none" }}>
         <NavLink
           to="/"

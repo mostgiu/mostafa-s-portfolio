@@ -28,7 +28,13 @@ function App() {
   );
 
   useEffect(() => {
-    Aos.init({ duration: 1000, once: true });
+    Aos.init({
+      duration: 600,
+      easing: "ease-out-cubic",
+      offset: 60,
+      once: true,
+      disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    });
   }, []);
 
   useEffect(() => {

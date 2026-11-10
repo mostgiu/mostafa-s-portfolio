@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./backToTop.css";
+import Icon from "../Icon/Icon";
 
 const BackToTop = () => {
   const [show, setShow] = useState(false);
@@ -26,7 +27,7 @@ const BackToTop = () => {
       onClick={scrollToTop}
       aria-label="Back to top"
     >
-      <i className="fa-solid fa-arrow-up"></i>
+      <Icon name="arrow-up" />
     </button>
   );
 };
