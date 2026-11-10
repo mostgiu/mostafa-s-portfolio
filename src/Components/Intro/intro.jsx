@@ -2,6 +2,7 @@ import React from "react";
 import "./intro.css";
 import Icon from "../Icon/Icon";
 import bg from "../../assets/bg.jpg";
+import avatar from "../../assets/avatar.jpg";
 import SocialLinks from "../SocialLinks/SocialLinks";
 
 const Intro = () => {
@@ -30,14 +31,19 @@ const Intro = () => {
         <SocialLinks />
       </div>
       <div className="introImageWrap">
-        <img
-          src={bg}
-          alt="Mostafa Saleh standing on a bridge by the river"
-          className="introImage rounded-2xl"
-          width="880"
-          height="1173"
-          fetchPriority="high"
-        />
+        {/* Small screens get a head-and-shoulders avatar, so the face reads at
+            avatar size and name/role stay above the fold. */}
+        <picture>
+          <source media="(max-width: 840px)" srcSet={avatar} />
+          <img
+            src={bg}
+            alt="Mostafa Saleh standing on a bridge by the river"
+            className="introImage rounded-2xl"
+            width="840"
+            height="1050"
+            fetchPriority="high"
+          />
+        </picture>
       </div>
     </section>
   );

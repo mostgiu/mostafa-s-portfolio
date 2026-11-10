@@ -148,13 +148,22 @@
     order: 1;
   }
 
+  .intro {
+    gap: 24px;
+    min-height: 0;
+  }
+
+  /* Compact avatar on small screens so name and role stay above the fold */
   .introImageWrap {
     order: 0;
-    width: 100%;
+    justify-content: flex-start;
   }
 
   .introImage {
-    width: min(100%, 360px);
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--color-surface), rgba(0, 0, 0, 0.08) 0px 10px 30px;
   }
 }
 

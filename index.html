@@ -23,6 +23,15 @@
     <meta name="twitter:image" content="%SITE_URL%/og-image.jpg" />
   </head>
   <body>
+    <!-- Apply the saved/system theme before first paint to avoid a light flash.
+         Mirrors the initial state logic in App.jsx. -->
+    <script>
+      try {
+        var saved = localStorage.getItem("darkMode");
+        var dark = saved !== null ? saved === "true" : matchMedia("(prefers-color-scheme: dark)").matches;
+        if (dark) document.body.classList.add("dark");
+      } catch (e) {}
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
