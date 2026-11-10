@@ -99,7 +99,7 @@ const ProjectCard = ({ project, index }) => {
         </div>
       </div>
       <div className="card-title text-start flex flex-col flex-1">
-        <div className="card-header flex gap-2 items-center mb-3">
+        <div className="card-header flex gap-2 items-center mb-2">
           {logo && <img src={logo} alt="" className="card-logo" />}
           <h3 className="font-bold text-2xl">{title}</h3>
         </div>
