@@ -37,10 +37,10 @@ const Intro = () => {
           <source media="(max-width: 840px)" srcSet={avatar} />
           <img
             src={bg}
-            alt="Mostafa Saleh standing on a bridge by the river"
+            alt="Mostafa Saleh on an old stone bridge with mountains behind"
             className="introImage rounded-2xl"
-            width="840"
-            height="1050"
+            width="880"
+            height="1100"
             fetchPriority="high"
           />
         </picture>
