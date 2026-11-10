@@ -7,6 +7,10 @@ import Vendora from "../../assets/vendora.png";
 import Inkora from "../../assets/inkora.png";
 import VendoraLogo from "../../assets/vendora-logo.svg";
 import InkoraLogo from "../../assets/inkora-logo.svg";
+import BazarloLogo from "../../assets/bazarlo-logo.svg";
+import NewsMagLogo from "../../assets/newsmag-logo.svg";
+import PizzaPrimaveraLogo from "../../assets/pizza-primavera-logo.svg";
+import EducityLogo from "../../assets/educity-logo.svg";
 import PizzaPrimaveraThumbnail from "../../assets/pizza-primavera-thumbnail.jpg";
 import NewsMagThumbnail from "../../assets/newsmag.jpg";
 
@@ -36,6 +40,7 @@ const projects = [
   },
   {
     title: "Bazarlo",
+    logo: BazarloLogo,
     image: BazarloThumbnail,
     alt: "Shopping bag and cart for the Bazarlo e-commerce store",
     description:
@@ -46,6 +51,7 @@ const projects = [
   },
   {
     title: "NewsMag",
+    logo: NewsMagLogo,
     image: NewsMagThumbnail,
     alt: "NewsMag news app showing the latest headlines",
     description:
@@ -56,6 +62,7 @@ const projects = [
   },
   {
     title: "Pizza Primavera",
+    logo: PizzaPrimaveraLogo,
     image: PizzaPrimaveraThumbnail,
     alt: "Pizza Primavera restaurant ordering app",
     description:
@@ -66,6 +73,7 @@ const projects = [
   },
   {
     title: "Educity",
+    logo: EducityLogo,
     image: Uni,
     alt: "Educity university website homepage",
     description:
