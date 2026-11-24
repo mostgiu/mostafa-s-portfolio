@@ -13,6 +13,8 @@ import PizzaPrimaveraLogo from "../../assets/pizza-primavera-logo.svg";
 import EducityLogo from "../../assets/educity-logo.svg";
 import PizzaPrimaveraThumbnail from "../../assets/pizza-primavera-thumbnail.jpg";
 import NewsMagThumbnail from "../../assets/newsmag.jpg";
+import TodoAppThumbnail from "../../assets/todo-app.jpg";
+import TodoAppLogo from "../../assets/todo-app-logo.svg";
 
 // Ordered by strength: the first cards are what recruiters see first.
 const projects = [
@@ -59,6 +61,17 @@ const projects = [
     tags: ["React", "Bootstrap", "REST API", "Search", "Responsive"],
     github: "https://github.com/mostgiu/newsmag",
     live: "https://newsmag-black.vercel.app",
+  },
+  {
+    title: "To-Do List",
+    logo: TodoAppLogo,
+    image: TodoAppThumbnail,
+    alt: "To-Do List app with task filters, progress bar, and a running task timer",
+    description:
+      "A React task manager with Google sign-in sync, per-task stopwatches, a daily time summary, filters, inline editing, and drag-to-reorder, with local storage as an offline fallback.",
+    tags: ["React", "Firebase", "Google Auth", "Time Tracking", "Responsive"],
+    github: "https://github.com/mostgiu/TODO-APP",
+    live: "https://mostgiu.github.io/TODO-APP/",
   },
   {
     title: "Pizza Primavera",
